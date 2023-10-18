@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag == "Goal")
         {
             TimeLeftText.text = "You Win";
+            Debug.Log("You Win");
             // Load new level
         }
     }
@@ -61,4 +62,8 @@ public class Player : MonoBehaviour
         myCam.transform.position = new Vector3(0, transform.position.y+ yOffset, -10);
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
 }
